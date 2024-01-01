@@ -2,13 +2,10 @@ package com.mpgl2.gestion_bib.controller;
 
 
 import com.mpgl2.gestion_bib.entity.Emprunt;
-import com.mpgl2.gestion_bib.exception.RessourceException;
 import com.mpgl2.gestion_bib.service.EmpruntService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/emprunts")

@@ -1,7 +1,8 @@
 package com.mpgl2.gestion_bib.controller;
 
+
 import com.mpgl2.gestion_bib.entity.Livre;
-import com.mpgl2.gestion_bib.service.LivreServiceService;
+import com.mpgl2.gestion_bib.service.LivreService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +12,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/livres")
 public class LivreController {
-    private final LivreServiceService livreService;
+    private final LivreService livreService;
 
-    public LivreController(LivreServiceService livreService) {
+    public LivreController(LivreService livreService) {
         this.livreService = livreService;
     }
 

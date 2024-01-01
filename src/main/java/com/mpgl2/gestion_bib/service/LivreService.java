@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class LivreServiceService {
+public class LivreService {
     private final LivreRepository livreRepository;
 
 
-    public LivreServiceService(LivreRepository livreRepository) {
+    public LivreService(LivreRepository livreRepository) {
         this.livreRepository = livreRepository;
     }
 

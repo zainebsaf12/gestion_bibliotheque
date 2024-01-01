@@ -26,10 +26,10 @@ public class EmpruntService {
 
     public Emprunt saveEmprunt(Emprunt emprunt) {
         livreRepository.findById(emprunt.getLivre().getId())
-                .orElseThrow(() -> new RessourceException("Livre non trouvé  "));
+                .orElseThrow(() -> new RessourceException("Livre non trouvé"));
 
         membreRepository.findById(emprunt.getMembre().getId())
-                .orElseThrow(() -> new RessourceException("Membre non trouvé "));
+                .orElseThrow(() -> new RessourceException("Membre non trouvé"));
 
 
         empruntRepository.save(emprunt);
@@ -38,7 +38,7 @@ public class EmpruntService {
 
     public void marquerLivreCommeRendu(Long empruntId) {
         Emprunt emprunt = empruntRepository.findById(empruntId)
-                .orElseThrow(() -> new RessourceException("Emprunt non trouvé "));
+                .orElseThrow(() -> new RessourceException("Emprunt non trouvé"));
 
         if (emprunt.getDateRetourEffectuee() == null) {
             emprunt.setDateRetourEffectuee(LocalDate.now());
